@@ -1,7 +1,20 @@
 import styled from "styled-components";
+import Overlay from "react-overlay-component";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [isOpen, setOverlay] = useState(false);
+  const [overlayUser, setOverlayUser] = useState({});
+  const closeOverlay = () => setOverlay(false);
+
+  const configs = {
+    animate: true,
+    clickDismiss: true,
+    escapeDismiss: false,
+    focusOutline: false,
+  };
+
   return (
     <div className="App">
       <header className="Main-header">
@@ -37,6 +50,64 @@ function App() {
         <h2 className="Team-names">Jon Mar</h2>
         <h2 className="Team-names">Ron Kelsy</h2>
       </section>
+      <div className="Overlay-section">
+        {/* replace buttons with img tags  */}
+        <button
+          className="primary"
+          onClick={() => {
+            setOverlay(true);
+            setOverlayUser({
+              name: "Jon Pynes",
+              bio: "Grew up in Nebraska, loves to learn, wants to die on Mars - just not on impact",
+            });
+          }}
+        >
+          Jon Pynes
+        </button>
+        <button
+          className="primary"
+          onClick={() => {
+            setOverlay(true);
+            setOverlayUser({ name: "Ron Michael", bio: "A bio about Ron" });
+          }}
+        >
+          Ron Michael
+        </button>
+        <button
+          className="primary"
+          onClick={() => {
+            setOverlay(true);
+            setOverlayUser({ name: "Mar", bio: "A bio about Mar" });
+          }}
+        >
+          Mar Lastname
+        </button>
+        <button
+          className="primary"
+          onClick={() => {
+            setOverlay(true);
+            setOverlayUser({ name: "Kelsy", bio: "A bio about Kelsy" });
+          }}
+        >
+          Kelsy Foulker
+        </button>
+
+        <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
+          <img src="" alt="" />
+          <h2>{overlayUser.name}</h2>
+          <p>{overlayUser.bio}</p>
+
+          <button
+            className="danger"
+            onClick={() => {
+              setOverlay(false);
+            }}
+          >
+            Back
+          </button>
+        </Overlay>
+      </div>
+
       <section className="Our-story">
         <h2 className="Story-heading">Our Story</h2>
         <ul>
