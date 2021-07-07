@@ -11,31 +11,35 @@ function App() {
       </Mainheader>
       <Mainhero>
         <Video>Video here</Video>
-        <ul>
-          <li>
-            <p className="Quote-blocks">
-              Paint once is a great app that gets you lots of kicks with the
-              cool kids
-            </p>
-          </li>
-          <li>
-            <p className="Quote-blocks">
-              Paint once is a great app that gets you lots of kicks with the
-              cool kids
-            </p>
-          </li>
-          <li>
-            <p className="Quote-blocks">
-              Paint once is a great app that gets you lots of kicks with the
-              cool kids
-            </p>
-          </li>
-        </ul>
+        <Quotesection>
+          <ul>
+            <li>
+              <Quoteone>
+                Paint once is a great app that gets you lots of kicks with the
+                cool kids
+              </Quoteone>
+            </li>
+            <li>
+              <Quotetwo>
+                Paint once is a great app that gets you lots of kicks with the
+                cool kids
+              </Quotetwo>
+            </li>
+            <li>
+              <Quotethree>
+                Paint once is a great app that gets you lots of kicks with the
+                cool kids
+              </Quotethree>
+            </li>
+          </ul>
+        </Quotesection>
       </Mainhero>
       <section className="The-team">
         <h2 className="Team-heading">Meet the Team</h2>
-        <h2 className="Team-names">Jon Mar</h2>
-        <h2 className="Team-names">Ron Kelsy</h2>
+        <Name>Jon</Name>
+        <Name>Mar</Name>
+        <Name>Ron</Name>
+        <Name>Kelsey</Name>
       </section>
       <section className="Our-story">
         <h2 className="Story-heading">Our Story</h2>
@@ -65,6 +69,8 @@ const Mainheader = styled.header`
   background-color: #5c6bc0;
   height: 241px;
   width: auto;
+  padding-left: 15px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -88,14 +94,53 @@ const Startbutton = styled.button`
   font-size: 12px;
 `;
 
+const Mainhero = styled.section`
+  background-color: #8e99f3;
+  height: 970px;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Video = styled.h3`
 height: 356px
   width: auto;
+  height: 356px;
   background-color: #ede7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const Mainhero = styled.section`
-  background-color: #8e99f3;
+const Quotesection = styled.section`
+  display: flex;
+  margin-top: 60px;
+`;
+
+const Quoteone = styled.p`
+  margin: 15px;
+  padding: 30px;
+  font-size: 18px;
+  display: flex;
+`;
+
+const Quotetwo = styled.p`
+  margin: 15px;
+  margin-top: 35px;
+  padding: 30px;
+  font-size: 18px;
+  display: flex;
+`;
+
+const Quotethree = styled.p`
+  margin: 15px;
+  margin-top: 35px;
+  padding: 30px;
+  font-size: 18px;
+  display: flex;
+`;
+
+const Name = styled.h2`
+  font-size: 36px;
 `;
 
 export default App;
