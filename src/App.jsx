@@ -86,7 +86,10 @@ function App() {
           className="primary"
           onClick={() => {
             setOverlay(true);
-            setOverlayUser({ name: "Kelsy", bio: "A bio about Kelsy" });
+            setOverlayUser({
+              name: "Kelsy",
+              bio: "25 years old, loves the color purple and baby Yoda.",
+            });
           }}
         >
           Kelsy Foulker
