@@ -4,14 +4,13 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-
-      <header className="Main-header">
-        <h1 className="Heading">Try Many Colors.</h1>
-        <h1 className="Heading">Paint Once.</h1>
-        <button className="Heading-start-button">Start</button>
-      </header>
-      <section className="Main-hero">
-        <h3>Video here</h3>
+      <Mainheader>
+        <Header>Try Many Colors.</Header>
+        <Headertwo>Paint Once.</Headertwo>
+        <Startbutton>Start</Startbutton>
+      </Mainheader>
+      <Mainhero>
+        <Video>Video here</Video>
         <ul>
           <li>
             <p className="Quote-blocks">
@@ -32,7 +31,7 @@ function App() {
             </p>
           </li>
         </ul>
-      </section>
+      </Mainhero>
       <section className="The-team">
         <h2 className="Team-heading">Meet the Team</h2>
         <h2 className="Team-names">Jon Mar</h2>
@@ -61,5 +60,42 @@ function App() {
     </div>
   );
 }
+
+const Mainheader = styled.header`
+  background-color: #5c6bc0;
+  height: 241px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
+const Header = styled.h1`
+  color: #ffffff;
+  font-size: 24px;
+`;
+
+const Headertwo = styled.h1`
+  color: #ffffff;
+  font-size: 24px;
+`;
+
+const Startbutton = styled.button`
+  background-color: #ede7f6;
+  border-radius: 30px;
+  width: 72px;
+  height: 25px;
+  font-size: 12px;
+`;
+
+const Video = styled.h3`
+height: 356px
+  width: auto;
+  background-color: #ede7f6;
+`;
+
+const Mainhero = styled.section`
+  background-color: #8e99f3;
+`;
 
 export default App;
