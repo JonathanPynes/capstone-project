@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+
       <header className="Main-header">
         <h1 className="Heading">Try Many Colors.</h1>
         <h1 className="Heading">Paint Once.</h1>
