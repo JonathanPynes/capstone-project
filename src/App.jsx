@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Overlay from "react-overlay-component";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import RINGS from "vanta/dist/vanta.rings.min";
 import "./App.css";
 
 function App() {
@@ -15,13 +16,33 @@ function App() {
     focusOutline: false,
   };
 
-  return (
-    <div className="App">
-      <header className="Main-header">
+  const MyVantaComponent = (props) => {
+    const [vantaEffect, setVantaEffect] = useState(0);
+    const myRef = useRef(null);
+    useEffect(() => {
+      if (!vantaEffect) {
+        setVantaEffect(
+          RINGS({
+            el: myRef.current,
+          })
+        );
+      }
+      return () => {
+        if (vantaEffect) vantaEffect.destroy();
+      };
+    }, [vantaEffect]);
+    return (
+      <div ref={myRef}>
         <h1 className="Heading">Try Many Colors.</h1>
         <h1 className="Heading">Paint Once.</h1>
         <button className="Heading-start-button">Start</button>
-      </header>
+      </div>
+    );
+  };
+
+  return (
+    <div className="App">
+      <MyVantaComponent></MyVantaComponent>
       <section className="Main-hero">
         <h3>Video here</h3>
         <ul>
@@ -68,7 +89,10 @@ function App() {
           className="primary"
           onClick={() => {
             setOverlay(true);
-            setOverlayUser({ name: "Ron Michael", bio: "Writer of English, aspiring writer of code, fourth of my name" });
+            setOverlayUser({
+              name: "Ron Michael",
+              bio: "Writer of English, aspiring writer of code, fourth of my name",
+            });
           }}
         >
           Ron Michael
