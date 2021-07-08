@@ -68,7 +68,7 @@ function App() {
           className="primary"
           onClick={() => {
             setOverlay(true);
-            setOverlayUser({ name: "Ron Michael", bio: "A bio about Ron" });
+            setOverlayUser({ name: "Ron Michael", bio: "Writer of English, aspiring writer of code, fourth of my name" });
           }}
         >
           Ron Michael
