@@ -33,7 +33,7 @@ function App() {
             mouseControls: true,
             touchControls: true,
             gyroControls: true,
-            minHeight: 200.0,
+            minHeight: 250.0,
             minWidth: 200.0,
           })
         );
@@ -44,9 +44,11 @@ function App() {
     }, [vantaEffect]);
     return (
       <div ref={myRef}>
-        <h1 className="Heading">Try Many Colors.</h1>
-        <h1 className="Heading">Paint Once.</h1>
-        <button className="Heading-start-button">Start</button>
+        <Mainheader>
+          <Header>Try Many Colors.</Header>
+          <Headertwo>Paint Once.</Headertwo>
+          <Startbutton>Start</Startbutton>
+        </Mainheader>
       </div>
     );
   };
@@ -79,11 +81,8 @@ function App() {
           </ul>
         </Quotesection>
       </Mainhero>
-      <section className="The-team">
-        <Meetteamheader>Meet the Team</Meetteamheader>
-        <h2 className="Team-names">Jon Mar</h2>
-        <h2 className="Team-names">Ron Kelsy</h2>
-      </section>
+
+      <Meetteamheader>Meet the Team</Meetteamheader>
       <Meetteam className="Overlay-section">
         {/* replace buttons with img tags  */}
         <button
@@ -171,9 +170,6 @@ function App() {
 // Header start
 
 const Mainheader = styled.header`
-  background-color: #5c6bc0;
-  height: 241px;
-  width: auto;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 30px;
@@ -183,13 +179,13 @@ const Mainheader = styled.header`
 `;
 
 const Header = styled.h1`
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
   text-align: right;
 `;
 
 const Headertwo = styled.h1`
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
   text-align: right;
 `;
@@ -265,15 +261,6 @@ const Meetteamheader = styled.h1`
   font-size: 36px;
   display: flex;
   justify-content: center;
-`;
-
-const Name = styled.h2`
-  font-size: 36px;
-  margin: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  display: flex;
-  justify-content: space-around;
 `;
 
 //Meet the team section end
