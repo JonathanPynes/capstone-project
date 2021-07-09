@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Overlay from "react-overlay-component";
 import React, { useState, useEffect, useRef } from "react";
-import RINGS from "vanta/dist/vanta.rings.min";
+import FOG from "vanta/dist/vanta.fog.min";
 import "./App.css";
 
 function App() {
@@ -22,8 +22,19 @@ function App() {
     useEffect(() => {
       if (!vantaEffect) {
         setVantaEffect(
-          RINGS({
+          FOG({
             el: myRef.current,
+            lowlightColor: 0x242a4b,
+            highlightColor: 0xffbb00,
+            midtoneColor: 0x861596,
+            zoom: 0.3,
+            blur: 0.32,
+            speed: 1,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            minHeight: 200.0,
+            minWidth: 200.0,
           })
         );
       }
