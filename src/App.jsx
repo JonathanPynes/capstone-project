@@ -3,6 +3,10 @@ import Overlay from "react-overlay-component";
 import React, { useState, useEffect, useRef } from "react";
 import FOG from "vanta/dist/vanta.fog.min";
 import "./App.css";
+import Kelsy from "../src/assets/kelsyProfilePic.jpeg";
+import Mar from "../src/assets/marProfilePic.png";
+import Ron from "../src/assets/ronProfilePic.jpeg";
+import Jon from "../src/assets/jonProfilePic.jpg";
 
 function App() {
   const [isOpen, setOverlay] = useState(false);
@@ -12,7 +16,7 @@ function App() {
   const configs = {
     animate: true,
     clickDismiss: true,
-    escapeDismiss: false,
+    escapeDismiss: true,
     focusOutline: false,
   };
 
@@ -84,66 +88,74 @@ function App() {
 
       <Meetteamheader>Meet the Team</Meetteamheader>
       <Meetteam className="Overlay-section">
-        {/* replace buttons with img tags  */}
-        <button
+        <MeetTheTeamProfile
+          src={Jon}
+          alt=""
           className="primary"
           onClick={() => {
             setOverlay(true);
             setOverlayUser({
               name: "Jon Pynes",
               bio: "Grew up in Nebraska, loves to learn, wants to die on Mars - just not on impact",
+              img: Jon,
             });
           }}
-        >
-          Jon Pynes
-        </button>
-        <button
+        />
+        <MeetTheTeamProfile
+          src={Ron}
+          alt=""
           className="primary"
           onClick={() => {
             setOverlay(true);
             setOverlayUser({
               name: "Ron Michael",
               bio: "Writer of English, aspiring writer of code, fourth of my name",
+              img: Ron,
             });
           }}
-        >
-          Ron Michael
-        </button>
-        <button
+        />
+        <MeetTheTeamProfile
+          src={Mar}
+          alt=""
           className="primary"
           onClick={() => {
             setOverlay(true);
-            setOverlayUser({ name: "Mar", bio: "A bio about Mar" });
+            setOverlayUser({
+              name: "Mar",
+              bio: "A bio about Mar",
+              img: Mar,
+            });
           }}
-        >
-          Mar Lastname
-        </button>
-        <button
+        />
+        <MeetTheTeamProfile
+          src={Kelsy}
+          alt=""
           className="primary"
           onClick={() => {
             setOverlay(true);
             setOverlayUser({
               name: "Kelsy",
               bio: "25 years old, loves the color purple and baby Yoda.",
+              img: Kelsy,
             });
           }}
-        >
-          Kelsy Foulker
-        </button>
+        />
 
         <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
-          <img src="" alt="" />
-          <h2>{overlayUser.name}</h2>
-          <p>{overlayUser.bio}</p>
+          <MeetTheTeamOverlayStyle>
+            <MeetTheTeamProfileOverlay src={overlayUser.img} alt="yay" />
+            <h2>{overlayUser.name}</h2>
+            <p>{overlayUser.bio}</p>
 
-          <button
-            className="danger"
-            onClick={() => {
-              setOverlay(false);
-            }}
-          >
-            Back
-          </button>
+            <button
+              className="danger"
+              onClick={() => {
+                setOverlay(false);
+              }}
+            >
+              Back
+            </button>
+          </MeetTheTeamOverlayStyle>
         </Overlay>
       </Meetteam>
 
@@ -248,6 +260,30 @@ const Quotethree = styled.p`
 
 //Video and Quotes end
 //Meet the team section start
+
+const MeetTheTeamProfile = styled.img`
+height: 7rem;
+width: 7rem;
+border-radius: 50%;
+background-position: center
+object-fit: cover;
+margin: 2rem;
+`;
+
+const MeetTheTeamProfileOverlay = styled.img`
+height: 16rem;
+width: 16rem;
+border-radius: 50%;
+background-position: center
+object-fit: cover;
+margin: 1rem;
+`;
+
+const MeetTheTeamOverlayStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Meetteam = styled.section`
   margin-top: 40px;
