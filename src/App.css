@@ -3,14 +3,6 @@ ul {
   padding-left: 0;
 }
 
-.dot {
-  height: 2rem;
-  width: 25rem;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-
 .Heading {
   color: black;
 }
