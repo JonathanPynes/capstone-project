@@ -6,3 +6,9 @@ ul {
 .Heading {
   color: black;
 }
+
+.Splatter-background {
+  background-image: url(../src/assets/splatterBackground.svg);
+  background-position: top center;
+  background-repeat: repeat;
+}

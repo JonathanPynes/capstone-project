@@ -86,94 +86,99 @@ function App() {
         </Quotesection>
       </Mainhero>
 
-      <Meetteamheader>Meet the Team</Meetteamheader>
-      <Meetteam className="Overlay-section">
-        <MeetTheTeamProfile
-          src={Jon}
-          alt=""
-          className="primary"
-          onClick={() => {
-            setOverlay(true);
-            setOverlayUser({
-              name: "Jon Pynes",
-              bio: "Grew up in Nebraska, loves to learn, wants to die on Mars - just not on impact",
-              img: Jon,
-            });
-          }}
-        />
-        <MeetTheTeamProfile
-          src={Ron}
-          alt=""
-          className="primary"
-          onClick={() => {
-            setOverlay(true);
-            setOverlayUser({
-              name: "Ron Michael",
-              bio: "Writer of English, aspiring writer of code, fourth of my name",
-              img: Ron,
-            });
-          }}
-        />
-        <MeetTheTeamProfile
-          src={Mar}
-          alt=""
-          className="primary"
-          onClick={() => {
-            setOverlay(true);
-            setOverlayUser({
-              name: "Mar",
-              bio: "A bio about Mar",
-              img: Mar,
-            });
-          }}
-        />
-        <MeetTheTeamProfile
-          src={Kelsy}
-          alt=""
-          className="primary"
-          onClick={() => {
-            setOverlay(true);
-            setOverlayUser({
-              name: "Kelsy",
-              bio: "25 years old, loves the color purple and baby Yoda.",
-              img: Kelsy,
-            });
-          }}
-        />
+      <section className="Splatter-background">
+        <Meetteamheader>Meet the Team</Meetteamheader>
+        <Meetteam className="Overlay-section">
+          <MeetTheTeamProfile
+            src={Jon}
+            alt="Jon's picture"
+            className="primary"
+            onClick={() => {
+              setOverlay(true);
+              setOverlayUser({
+                name: "Jon Pynes",
+                bio: "Grew up in Nebraska, loves to learn, wants to die on Mars - just not on impact",
+                img: Jon,
+              });
+            }}
+          />
+          <MeetTheTeamProfile
+            src={Ron}
+            alt="Ron's picture"
+            className="primary"
+            onClick={() => {
+              setOverlay(true);
+              setOverlayUser({
+                name: "Ron Michael",
+                bio: "Writer of English, aspiring writer of code, fourth of my name",
+                img: Ron,
+              });
+            }}
+          />
+          <MeetTheTeamProfile
+            src={Mar}
+            alt="Mar's picture"
+            className="primary"
+            onClick={() => {
+              setOverlay(true);
+              setOverlayUser({
+                name: "Mar",
+                bio: "A bio about Mar",
+                img: Mar,
+              });
+            }}
+          />
+          <MeetTheTeamProfile
+            src={Kelsy}
+            alt="Kelsy's picture"
+            className="primary"
+            onClick={() => {
+              setOverlay(true);
+              setOverlayUser({
+                name: "Kelsy",
+                bio: "25 years old, loves the color purple and baby Yoda.",
+                img: Kelsy,
+              });
+            }}
+          />
 
-        <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
-          <MeetTheTeamOverlayStyle>
-            <MeetTheTeamProfileOverlay src={overlayUser.img} alt="yay" />
-            <h2>{overlayUser.name}</h2>
-            <p>{overlayUser.bio}</p>
+          <Overlay
+            configs={configs}
+            isOpen={isOpen}
+            closeOverlay={closeOverlay}
+          >
+            <MeetTheTeamOverlayStyle>
+              <MeetTheTeamProfileOverlay src={overlayUser.img} alt="yay" />
+              <h2>{overlayUser.name}</h2>
+              <p>{overlayUser.bio}</p>
 
-            <button
-              className="danger"
-              onClick={() => {
-                setOverlay(false);
-              }}
-            >
-              Back
-            </button>
-          </MeetTheTeamOverlayStyle>
-        </Overlay>
-      </Meetteam>
-
-      <Ourstory>
-        <Storyheader>Our Story</Storyheader>
-        <ul>
-          <li>
-            <Storytext>
-              Painting is life. That’s what Grandpa Eddy would say watching it
-              dry. “If you want to see the color, you have to put in the paint.”{" "}
-              <br></br>
-              Today,
-              <br></br>try many colors,
-              <br></br>paint once.
-            </Storytext>
-          </li>
-        </ul>
-      </Ourstory>
+              <button
+                className="danger"
+                onClick={() => {
+                  setOverlay(false);
+                }}
+              >
+                Back
+              </button>
+            </MeetTheTeamOverlayStyle>
+          </Overlay>
+        </Meetteam>
+        <Ourstory>
+          <Storyheader>Our Story</Storyheader>
+          <ul>
+            <li>
+              <Storytext>
+                Painting is life. That’s what Grandpa Eddy would say watching it
+                dry. “If you want to see the color, you have to put in the
+                paint.” <br></br>
+                Today,
+                <br></br>try many colors,
+                <br></br>paint once.
+              </Storytext>
+            </li>
+          </ul>
+        </Ourstory>
+      </section>
       <footer></footer>
     </div>
   );
