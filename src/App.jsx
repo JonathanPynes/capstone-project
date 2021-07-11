@@ -188,6 +188,7 @@ const Mainheader = styled.header`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  font-family: "Noto Sans", sans-serif;
 `;
 
 const Header = styled.h1`
@@ -208,6 +209,7 @@ const Startbutton = styled.button`
   width: 72px;
   height: 25px;
   font-size: 12px;
+  font-family: "Noto Sans", sans-serif;
 `;
 
 //Header end
@@ -218,6 +220,7 @@ const Mainhero = styled.section`
   height: 970px;
   display: flex;
   flex-direction: column;
+  font-family: "Noto Sans", sans-serif;
 `;
 
 const Video = styled.h3`
@@ -291,12 +294,14 @@ const Meetteam = styled.section`
   display: grid;
   grid-template-columns: auto auto;
   justify-content: center;
+  font-family: "Noto Sans", sans-serif;
 `;
 
 const Meetteamheader = styled.h1`
   font-size: 36px;
   display: flex;
   justify-content: center;
+  font-family: "Noto Sans", sans-serif;
 `;
 
 //Meet the team section end
@@ -307,6 +312,7 @@ const Ourstory = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Noto Sans", sans-serif;
 `;
 
 const Storyheader = styled.h2`
