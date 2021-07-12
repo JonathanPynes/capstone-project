@@ -7,6 +7,8 @@ import Kelsy from "../src/assets/kelsyProfilePic.jpeg";
 import Mar from "../src/assets/marProfilePic.png";
 import Ron from "../src/assets/ronProfilePic.jpeg";
 import Jon from "../src/assets/jonProfilePic.jpg";
+import Yellowpaintbackground from "../src/assets/yellowPaintBackground.svg";
+import Splatter from "../src/assets/splatterBackground.svg";
 
 function App() {
   const [isOpen, setOverlay] = useState(false);
@@ -61,32 +63,34 @@ function App() {
     <div className="App">
       <MyVantaComponent></MyVantaComponent>
       <Mainhero>
-        <Video>Video here</Video>
-        <Quotesection>
-          <ul>
-            <li>
-              <Quoteone>
-                Paint once is a great app that gets you lots of kicks with the
-                cool kids
-              </Quoteone>
-            </li>
-            <li>
-              <Quotetwo>
-                Paint once is a great app that gets you lots of kicks with the
-                cool kids
-              </Quotetwo>
-            </li>
-            <li>
-              <Quotethree>
-                Paint once is a great app that gets you lots of kicks with the
-                cool kids
-              </Quotethree>
-            </li>
-          </ul>
-        </Quotesection>
+        <Yellowpaintbackgroundcss>
+          <Video>Video here</Video>
+          <Quotesection>
+            <ul>
+              <li>
+                <Quoteone>
+                  Paint once is a great app that gets you lots of kicks with the
+                  cool kids
+                </Quoteone>
+              </li>
+              <li>
+                <Quotetwo>
+                  Paint once is a great app that gets you lots of kicks with the
+                  cool kids
+                </Quotetwo>
+              </li>
+              <li>
+                <Quotethree>
+                  Paint once is a great app that gets you lots of kicks with the
+                  cool kids
+                </Quotethree>
+              </li>
+            </ul>
+          </Quotesection>
+        </Yellowpaintbackgroundcss>
       </Mainhero>
 
-      <section className="Splatter-background">
+      <Splattercss>
         <Meetteamheader>Meet the Team</Meetteamheader>
         <Meetteam className="Overlay-section">
           <MeetTheTeamProfile
@@ -178,7 +182,7 @@ function App() {
             </li>
           </ul>
         </Ourstory>
-      </section>
+      </Splattercss>
       <footer></footer>
     </div>
   );
@@ -221,7 +225,6 @@ const Startbutton = styled.button`
 //Video and Quotes start
 
 const Mainhero = styled.section`
-  background-color: #8e99f3;
   height: 970px;
   display: flex;
   flex-direction: column;
@@ -241,6 +244,7 @@ height: 356px
 const Quotesection = styled.section`
   display: flex;
   margin-top: 60px;
+  font-weight: 700;
 `;
 
 const Quoteone = styled.p`
@@ -309,6 +313,18 @@ const Meetteamheader = styled.h1`
   font-family: "Noto Sans", sans-serif;
 `;
 
+const Yellowpaintbackgroundcss = styled.div`
+  background-image: url(${Yellowpaintbackground});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;s
+`;
+
+const Splattercss = styled.section`
+  background-image: url(${Splatter});
+  background-position: top center;
+  background-repeat: repeat;
+`;
 //Meet the team section end
 //Our story section start
 
@@ -330,6 +346,7 @@ const Storytext = styled.p`
   margin: 35px;
   margin-bottom: 50px;
   text-align: center;
+  font-weight: 700;
 `;
 
 //Our story section end
