@@ -7,6 +7,8 @@ import Kelsy from "../src/assets/kelsyProfilePic.jpeg";
 import Mar from "../src/assets/marProfilePic.png";
 import Ron from "../src/assets/ronProfilePic.jpeg";
 import Jon from "../src/assets/jonProfilePic.jpg";
+import Yellowpaintbackground from "../src/assets/yellowPaintBackground.svg";
+import Splatter from "../src/assets/splatterBackground.svg";
 
 function App() {
   const [isOpen, setOverlay] = useState(false);
@@ -61,118 +63,128 @@ function App() {
     <div className="App">
       <MyVantaComponent></MyVantaComponent>
       <Mainhero>
-        <Video>Video here</Video>
-        <Quotesection>
-          <ul>
-            <li>
-              <Quoteone>Visualize your new room</Quoteone>
-            </li>
-            <li>
-              <Quotetwo>Customize and save color palettes</Quotetwo>
-            </li>
-            <li>
-              <Quotethree>
-                See popular shades and coordinating colors
-              </Quotethree>
-            </li>
-          </ul>
-        </Quotesection>
+        <Yellowpaintbackgroundcss>
+          <Video>Video here</Video>
+          <Quotesection>
+            <ul>
+              <li>
+                <Quoteone>Visualize your new room</Quoteone>
+              </li>
+              <li>
+                <Quotetwo>Customize and save color palettes</Quotetwo>
+              </li>
+              <li>
+                <Quotethree>
+                  See popular shades and coordinating colors
+                </Quotethree>
+              </li>
+            </ul>
+          </Quotesection>
+        </Yellowpaintbackgroundcss>
       </Mainhero>
 
-      <Meetteamheader>Meet the Team</Meetteamheader>
-      <Meetteam className="Overlay-section">
-        <MeetTheTeamProfile
-          src={Jon}
-          alt=""
-          className="primary"
-          onClick={() => {
-            setOverlay(true);
-            setOverlayUser({
-              name: "Jon Pynes",
-              bio: "Grew up in Nebraska, loves to learn, wants to die on Mars - just not on impact",
-              img: Jon,
-            });
-          }}
-        />
-        <MeetTheTeamProfile
-          src={Ron}
-          alt=""
-          className="primary"
-          onClick={() => {
-            setOverlay(true);
-            setOverlayUser({
-              name: "Ron Michael",
-              bio: "Writer of English, aspiring writer of code, fourth of my name",
-              img: Ron,
-            });
-          }}
-        />
-        <MeetTheTeamProfile
-          src={Mar}
-          alt=""
-          className="primary"
-          onClick={() => {
-            setOverlay(true);
-            setOverlayUser({
-              name: "Mar",
-              bio: "A bio about Mar",
-              img: Mar,
-            });
-          }}
-        />
-        <MeetTheTeamProfile
-          src={Kelsy}
-          alt=""
-          className="primary"
-          onClick={() => {
-            setOverlay(true);
-            setOverlayUser({
-              name: "Kelsy",
-              bio: "25 years old, loves the color purple and baby Yoda.",
-              img: Kelsy,
-            });
-          }}
-        />
+      <Splatterbackgroundcss>
+        <Meetteamheader>Meet the Team</Meetteamheader>
+        <Meetteam className="Overlay-section">
+          <MeetTheTeamProfile
+            src={Jon}
+            alt=""
+            className="primary"
+            onClick={() => {
+              setOverlay(true);
+              setOverlayUser({
+                name: "Jon Pynes",
+                bio: "Grew up in Nebraska, loves to learn, wants to die on Mars - just not on impact",
+                img: Jon,
+              });
+            }}
+          />
+          <MeetTheTeamProfile
+            src={Ron}
+            alt=""
+            className="primary"
+            onClick={() => {
+              setOverlay(true);
+              setOverlayUser({
+                name: "Ron Michael",
+                bio: "Writer of English, aspiring writer of code, fourth of my name",
+                img: Ron,
+              });
+            }}
+          />
+          <MeetTheTeamProfile
+            src={Mar}
+            alt=""
+            className="primary"
+            onClick={() => {
+              setOverlay(true);
+              setOverlayUser({
+                name: "Mar",
+                bio: "A bio about Mar",
+                img: Mar,
+              });
+            }}
+          />
+          <MeetTheTeamProfile
+            src={Kelsy}
+            alt=""
+            className="primary"
+            onClick={() => {
+              setOverlay(true);
+              setOverlayUser({
+                name: "Kelsy",
+                bio: "25 years old, loves the color purple and baby Yoda.",
+                img: Kelsy,
+              });
+            }}
+          />
 
-        <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
-          <MeetTheTeamOverlayStyle>
-            <MeetTheTeamProfileOverlay src={overlayUser.img} alt="yay" />
-            <h2>{overlayUser.name}</h2>
-            <p>{overlayUser.bio}</p>
+          <Overlay
+            configs={configs}
+            isOpen={isOpen}
+            closeOverlay={closeOverlay}
+          >
+            <MeetTheTeamOverlayStyle>
+              <MeetTheTeamProfileOverlay src={overlayUser.img} alt="yay" />
+              <h2>{overlayUser.name}</h2>
+              <p>{overlayUser.bio}</p>
 
-            <button
-              className="danger"
-              onClick={() => {
-                setOverlay(false);
-              }}
-            >
-              Back
-            </button>
-          </MeetTheTeamOverlayStyle>
-        </Overlay>
-      </Meetteam>
+              <button
+                className="danger"
+                onClick={() => {
+                  setOverlay(false);
+                }}
+              >
+                Back
+              </button>
+            </MeetTheTeamOverlayStyle>
+          </Overlay>
+        </Meetteam>
 
-      <Ourstory>
-        <Storyheader>Our Story</Storyheader>
-        <ul>
-          <li>
-            <Storytext>
-              We’ve all spent a lot more time staring at the same four walls
-              lately. It’s time to liven up your living space, but a mountain of
-              paint swatches and some tough decisions lie in your way. Don’t
-              know where to start? Afraid of picking the wrong color? <br></br>
-              Paint Once is here to help you choose a color palette and see your
-              new room before you even touch a paint can. Whether you’ve just
-              bought a new home, you’re getting ready to sell your home, or you
-              just want to freshen your space up, Paint Once is the only tool
-              you need to design and visualize your room’s new look. <br></br>
-              Today,
-              <br></br>Try many colors,
-              <br></br>Paint once.
-            </Storytext>
-          </li>
-        </ul>
-      </Ourstory>
+        <Ourstory>
+          <Storyheader>Our Story</Storyheader>
+          <ul>
+            <li>
+              <Storytext>
+                We’ve all spent a lot more time staring at the same four walls
+                lately. It’s time to liven up your living space, but a mountain
+                of paint swatches and some tough decisions lie in your way.
+                Don’t know where to start? Afraid of picking the wrong color?{" "}
+                <br></br>
+                Paint Once is here to help you choose a color palette and see
+                your new room before you even touch a paint can. Whether you’ve
+                just bought a new home, you’re getting ready to sell your home,
+                or you just want to freshen your space up, Paint Once is the
+                only tool you need to design and visualize your room’s new look.{" "}
+                <br></br>
+                Today,
+                <br></br>Try many colors,
+                <br></br>Paint once.
+              </Storytext>
+            </li>
+          </ul>
+        </Ourstory>
+      </Splatterbackgroundcss>
       <footer></footer>
     </div>
   );
@@ -215,7 +227,6 @@ const Startbutton = styled.button`
 //Video and Quotes start
 
 const Mainhero = styled.section`
-  background-color: #8e99f3;
   height: 970px;
   display: flex;
   flex-direction: column;
@@ -235,6 +246,7 @@ height: 356px
 const Quotesection = styled.section`
   display: flex;
   margin-top: 60px;
+  font-weight: 700;
 `;
 
 const Quoteone = styled.p`
@@ -303,6 +315,18 @@ const Meetteamheader = styled.h1`
   font-family: "Noto Sans", sans-serif;
 `;
 
+const Splatterbackgroundcss = styled.div`
+  background-image: url(${Splatter});
+  background-position: top center;
+  background-repeat: repeat;
+`;
+const Yellowpaintbackgroundcss = styled.div`
+  background-image: url(${Yellowpaintbackground});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+`;
+
 //Meet the team section end
 //Our story section start
 
@@ -324,6 +348,7 @@ const Storytext = styled.p`
   margin: 35px;
   margin-bottom: 50px;
   text-align: center;
+  font-weight: 700;
 `;
 
 //Our story section end
