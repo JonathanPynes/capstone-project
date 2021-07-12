@@ -65,21 +65,14 @@ function App() {
         <Quotesection>
           <ul>
             <li>
-              <Quoteone>
-                Paint once is a great app that gets you lots of kicks with the
-                cool kids
-              </Quoteone>
+              <Quoteone>Visualize your new room</Quoteone>
             </li>
             <li>
-              <Quotetwo>
-                Paint once is a great app that gets you lots of kicks with the
-                cool kids
-              </Quotetwo>
+              <Quotetwo>Customize and save color palettes</Quotetwo>
             </li>
             <li>
               <Quotethree>
-                Paint once is a great app that gets you lots of kicks with the
-                cool kids
+                See popular shades and coordinating colors
               </Quotethree>
             </li>
           </ul>
@@ -164,12 +157,18 @@ function App() {
         <ul>
           <li>
             <Storytext>
-              Painting is life. That’s what Grandpa Eddy would say watching it
-              dry. “If you want to see the color, you have to put in the paint.”{" "}
-              <br></br>
+              We’ve all spent a lot more time staring at the same four walls
+              lately. It’s time to liven up your living space, but a mountain of
+              paint swatches and some tough decisions lie in your way. Don’t
+              know where to start? Afraid of picking the wrong color? <br></br>
+              Paint Once is here to help you choose a color palette and see your
+              new room before you even touch a paint can. Whether you’ve just
+              bought a new home, you’re getting ready to sell your home, or you
+              just want to freshen your space up, Paint Once is the only tool
+              you need to design and visualize your room’s new look. <br></br>
               Today,
-              <br></br>try many colors,
-              <br></br>paint once.
+              <br></br>Try many colors,
+              <br></br>Paint once.
             </Storytext>
           </li>
         </ul>
