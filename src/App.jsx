@@ -9,6 +9,7 @@ import Ron from "../src/assets/ronProfilePic.jpeg";
 import Jon from "../src/assets/jonProfilePic.jpg";
 import Yellowpaintbackground from "../src/assets/yellowPaintBackground.svg";
 import Splatter from "../src/assets/splatterBackground.svg";
+import Rainbowbutton from "../src/assets/rainbowButton.GIF";
 
 function App() {
   const [isOpen, setOverlay] = useState(false);
@@ -77,6 +78,12 @@ function App() {
                 <Quotethree>
                   See popular shades and coordinating colors
                 </Quotethree>
+              </li>
+              <li>
+                <Rainbowbuttoncss
+                  src={Rainbowbutton}
+                  alt="Rainbow start button"
+                ></Rainbowbuttoncss>
               </li>
             </ul>
           </Quotesection>
@@ -227,7 +234,7 @@ const Startbutton = styled.button`
 //Video and Quotes start
 
 const Mainhero = styled.section`
-  height: 970px;
+  height: 1150px;
   display: flex;
   flex-direction: column;
   font-family: "Noto Sans", sans-serif;
@@ -270,6 +277,12 @@ const Quotethree = styled.p`
   padding: 30px;
   font-size: 18px;
   display: flex;
+`;
+
+const Rainbowbuttoncss = styled.img`
+  width: 20rem;
+  height: 20rem;
+  object-fit: contain;
 `;
 
 //Video and Quotes end
@@ -344,7 +357,7 @@ const Storyheader = styled.h2`
 `;
 
 const Storytext = styled.p`
-  font-size: 18;
+  font-size: 1.1rem;
   margin: 35px;
   margin-bottom: 50px;
   text-align: center;
