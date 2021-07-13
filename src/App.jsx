@@ -65,7 +65,6 @@ function App() {
       <MyVantaComponent></MyVantaComponent>
       <Mainhero>
         <Yellowpaintbackgroundcss>
-          <Video>Video here</Video>
           <Quotesection>
             <ul>
               <li>
@@ -234,20 +233,10 @@ const Startbutton = styled.button`
 //Video and Quotes start
 
 const Mainhero = styled.section`
-  height: 1180px;
+  height: 850px;
   display: flex;
   flex-direction: column;
   font-family: "Noto Sans", sans-serif;
-`;
-
-const Video = styled.h3`
-height: 356px
-  width: auto;
-  height: 356px;
-  background-color: #ede7f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Quotesection = styled.section`
