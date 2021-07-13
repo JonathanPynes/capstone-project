@@ -234,7 +234,7 @@ const Startbutton = styled.button`
 //Video and Quotes start
 
 const Mainhero = styled.section`
-  height: 1150px;
+  height: 1180px;
   display: flex;
   flex-direction: column;
   font-family: "Noto Sans", sans-serif;
@@ -252,31 +252,31 @@ height: 356px
 
 const Quotesection = styled.section`
   display: flex;
+  justify-content: center;
   margin-top: 60px;
   font-weight: 700;
+  text-align: center;
 `;
 
 const Quoteone = styled.p`
   margin: 15px;
   padding: 30px;
-  font-size: 18px;
-  display: flex;
+  font-size: 20px;
+  text-align: center;
 `;
 
 const Quotetwo = styled.p`
   margin: 15px;
   margin-top: 35px;
   padding: 30px;
-  font-size: 18px;
-  display: flex;
+  font-size: 20px;
 `;
 
 const Quotethree = styled.p`
   margin: 15px;
   margin-top: 35px;
   padding: 30px;
-  font-size: 18px;
-  display: flex;
+  font-size: 20px;
 `;
 
 const Rainbowbuttoncss = styled.img`
@@ -357,7 +357,7 @@ const Storyheader = styled.h2`
 `;
 
 const Storytext = styled.p`
-  font-size: 1.1rem;
+  font-size: 18px;
   margin: 35px;
   margin-bottom: 50px;
   text-align: center;
