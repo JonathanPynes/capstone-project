@@ -10,7 +10,7 @@ import Jon from "../src/assets/jonProfilePic.jpg";
 import Yellowpaintbackground from "../src/assets/yellowPaintBackground.svg";
 import Splatter from "../src/assets/splatterBackground.svg";
 import Rainbowbutton from "../src/assets/rainbowButton.GIF";
-import Example from "../src/assets/Example.gif";
+import Example from "../src/assets/Example_Cropped.gif";
 
 function App() {
   const [isOpen, setOverlay] = useState(false);
