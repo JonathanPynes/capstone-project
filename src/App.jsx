@@ -10,6 +10,7 @@ import Jon from "../src/assets/jonProfilePic.jpg";
 import Yellowpaintbackground from "../src/assets/yellowPaintBackground.svg";
 import Splatter from "../src/assets/splatterBackground.svg";
 import Rainbowbutton from "../src/assets/rainbowButton.GIF";
+import Example from "../src/assets/Example.gif";
 
 function App() {
   const [isOpen, setOverlay] = useState(false);
@@ -71,38 +72,38 @@ function App() {
       <MyVantaComponent></MyVantaComponent>
       <Mainhero>
         <Yellowpaintbackgroundcss>
-          <Quotesection>
-            <ul>
-              <li>
-                <Quoteone>Visualize your new room</Quoteone>
-              </li>
-              <li>
-                <Quotetwo>Customize and save color palettes</Quotetwo>
-              </li>
-              <li>
-                <Quotethree>
-                  See popular shades and coordinating colors
-                </Quotethree>
-              </li>
-              <li>
-                <a
-                  href="https://ronmichael461806.invisionapp.com/console/share/GE2TDD4I8U/700852821"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Rainbowbuttoncss
-                    src={Rainbowbutton}
-                    alt="Rainbow start button"
-                  ></Rainbowbuttoncss>
-                </a>
-              </li>
-            </ul>
-          </Quotesection>
+          <ExampleGif>
+            <Quotesection>
+              <ul>
+                <li>
+                  <Quoteone>Visualize your new room</Quoteone>
+                </li>
+                <li>
+                  <Quotetwo></Quotetwo>
+                </li>
+                <li>
+                  <Quotethree></Quotethree>
+                </li>
+                <li>
+                  <a
+                    href="https://ronmichael461806.invisionapp.com/console/share/GE2TDD4I8U/700852821"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Rainbowbuttoncss
+                      src={Rainbowbutton}
+                      alt="Rainbow start button"
+                    ></Rainbowbuttoncss>
+                  </a>
+                </li>
+              </ul>
+            </Quotesection>
+          </ExampleGif>
         </Yellowpaintbackgroundcss>
       </Mainhero>
 
       <Splatterbackgroundcss>
-        <Meetteamheader>Meet the Team</Meetteamheader>
+        <Meetteamheader></Meetteamheader>
         <Meetteam className="Overlay-section">
           <MeetTheTeamProfile
             src={Jon}
@@ -250,7 +251,12 @@ const Mainhero = styled.section`
   flex-direction: column;
   font-family: "Noto Sans", sans-serif;
 `;
-
+const ExampleGif = styled.div`
+  background-image: url(${Example});
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+`;
 const Quotesection = styled.section`
   display: flex;
   justify-content: center;
@@ -262,7 +268,8 @@ const Quotesection = styled.section`
 const Quoteone = styled.p`
   margin: 15px;
   padding: 30px;
-  font-size: 20px;
+  margin-bottom: 10rem;
+  font-size: 30px;
   text-align: center;
 `;
 
@@ -284,6 +291,8 @@ const Rainbowbuttoncss = styled.img`
   width: 20rem;
   height: 20rem;
   object-fit: contain;
+  margin-right: 1.5rem;
+  margin-top: 12rem;
 `;
 
 //Video and Quotes end
@@ -314,7 +323,7 @@ const MeetTheTeamOverlayStyle = styled.div`
 `;
 
 const Meetteam = styled.section`
-  margin-top: 40px;
+  margin-top: 15rem;
   margin-bottom: 40px;
   display: grid;
   grid-template-columns: auto auto;
@@ -323,6 +332,7 @@ const Meetteam = styled.section`
 `;
 
 const Meetteamheader = styled.h1`
+  margin-top: 20rem  
   font-size: 36px;
   display: flex;
   justify-content: center;
