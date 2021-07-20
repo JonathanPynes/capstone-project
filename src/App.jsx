@@ -76,7 +76,7 @@ function App() {
             <Quotesection>
               <ul>
                 <li>
-                  <Quoteone>Visualize your new room</Quoteone>
+                  <Quoteone>Visualize your new colors</Quoteone>
                 </li>
                 <li>
                   <Quotetwo></Quotetwo>
@@ -268,7 +268,7 @@ const Quotesection = styled.section`
 const Quoteone = styled.p`
   margin: 15px;
   padding: 30px;
-  margin-bottom: 10rem;
+  margin-top: 3rem;
   font-size: 30px;
   text-align: center;
 `;
@@ -291,8 +291,8 @@ const Rainbowbuttoncss = styled.img`
   width: 20rem;
   height: 20rem;
   object-fit: contain;
-  margin-right: 1.5rem;
-  margin-top: 12rem;
+  margin-right: 1.3rem;
+  margin-top: 19rem;
 `;
 
 //Video and Quotes end
